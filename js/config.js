@@ -24,7 +24,7 @@ const API_SITES = {
     dyttzy: {
         api: 'http://caiji.dyttzyapi.com/api.php/provide/vod/at',
         name: '电影天堂资源',
-        detail: http://vip.dyttzyplay.com',
+        
     },
     ruyi: {
         api: 'https://cj.rycjapi.com/api.php/provide/vod',
