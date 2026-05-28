@@ -154,12 +154,12 @@ const API_SITES = {
      lsb: {
          api: 'https://apilsbzy1.com',
          name: 'lsb资源',
-         adult: false,
+         adult: false
      },
      huangcang: {
          api: 'https://hsckzy.vip',
          name: '黄色仓库',
-         adult: false,
+         adult: false
          detail: 'https://hsckzy.vip'
      },
      yutu: {
