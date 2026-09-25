@@ -435,43 +435,5 @@
 
     <!-- 添加弹窗和URL搜索参数处理脚本 -->
     <script src="js/index-page.js"></script>
-
-    <!-- 强制关闭黄色内容过滤，默认加载伦理内容 -->
-    <script>
-    (function () {
-        // 尝试清除可能保存过滤状态的 localStorage 键
-        try {
-            Object.keys(localStorage).forEach(function(key) {
-                var k = key.toLowerCase();
-                if (k.includes('yellow') || k.includes('filter')) {
-                    localStorage.removeItem(key);
-                }
-            });
-        } catch (e) {}
-
-        function disableYellowFilter() {
-            var toggle = document.getElementById('yellowFilterToggle');
-            if (!toggle) return;
-            // 如果当前是开启过滤状态，就强制关闭
-            if (toggle.checked) {
-                toggle.checked = false;
-                // 触发 change，让原有 JS 同步状态并保存
-                toggle.dispatchEvent(new Event('change', { bubbles: true }));
-            }
-        }
-
-        // DOM 加载后先执行一次
-        document.addEventListener('DOMContentLoaded', function () {
-            disableYellowFilter();
-            setTimeout(disableYellowFilter, 300);
-        });
-
-        // 页面完全加载后再执行，防止被其他脚本覆盖
-        window.addEventListener('load', function () {
-            disableYellowFilter();
-            setTimeout(disableYellowFilter, 500);
-        });
-    })();
-    </script>
 </body>
-</html>
+    </html>
